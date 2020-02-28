@@ -4,8 +4,16 @@ import "./Card.css";
 
 export const Card = props => {
   // bring in team logo
-  <img
-    src={`https://media.api-sports.io/teams/${props.team}.png`}
-    alt="Team Logo"
-  />;
+  return (
+    <div className="card-container">
+      <img
+        src={`https://media.api-sports.io/teams/${props.team.team_id}.png`}
+        alt="Team Logo"
+      />
+      <h2>{props.team.name}</h2>
+      <p>{props.team.venue_name}</p>
+    </div>
+  );
 };
+
+export default Card;
