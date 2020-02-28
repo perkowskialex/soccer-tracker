@@ -1,4 +1,5 @@
 import React from "react";
+import CardList from "../../components/CardList/CardList";
 
 export default class PremierLeague extends React.Component {
   constructor(props) {
@@ -33,15 +34,12 @@ export default class PremierLeague extends React.Component {
         console.log(err);
       });
   }
-  
-  const premierLeagueMap = () => {
-
-  }
 
   render() {
     return (
       <div>
         <h1>Premier League Teams</h1>
+        <CardList teams={this.state.team} />
       </div>
     );
   }
