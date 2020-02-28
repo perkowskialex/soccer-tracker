@@ -7,6 +7,7 @@ export const Card = props => {
   return (
     <div className="card-container">
       <img
+        className="image"
         src={`https://media.api-sports.io/teams/${props.team.team_id}.png`}
         alt="Team Logo"
       />

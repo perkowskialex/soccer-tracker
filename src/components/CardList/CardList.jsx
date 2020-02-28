@@ -6,7 +6,7 @@ const CardList = props => {
   return (
     <div className="card-list">
       {props.teams.map(team => (
-        <Card key={team.id} team={team} />
+        <Card key={team.team_id} team={team} />
       ))}
     </div>
   );
