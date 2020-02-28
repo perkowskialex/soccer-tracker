@@ -37,7 +37,7 @@ export default class PremierLeague extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="teams-container">
         <h1>Premier League Teams</h1>
         <CardList teams={this.state.teams} />
       </div>

@@ -10,12 +10,13 @@
   backface-visibility: hidden;
   transform: translateZ(0);
   transition: transform 0.25s ease-out;
+  align-items: center;
 }
 .card-container:hover {
   transform: scale(1.05);
 }
 
 .image {
-  height: 50%;
-  width: 50%;
+  width: 150px;
+  height: 150px;
 }
