@@ -1,0 +1,27 @@
+.header-container {
+  height: 5vw;
+  background-color: black;
+  color: wheat;
+  font-size: 120%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.options-container {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.option-link {
+  align-content: flex-end;
+  justify-content: end;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+}
