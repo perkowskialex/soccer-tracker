@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 const Header = () => {
@@ -6,8 +7,12 @@ const Header = () => {
     <div className="header-container">
       <div className="logo-container">Logo</div>
       <div className="options-container">
-        <div className="option-link">Home Page</div>
-        <div className="option-link">Premier League</div>
+        <Link className="option-link" to="/">
+          Home
+        </Link>
+        <Link className="option-link" to="/pl">
+          Premier League
+        </Link>
       </div>
     </div>
   );

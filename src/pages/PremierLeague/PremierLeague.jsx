@@ -1,5 +1,4 @@
 import React from "react";
-import { ReactComponent } from "*.svg";
 
 export default class PremierLeague extends React.Component {
   constructor(props) {
@@ -12,7 +11,8 @@ export default class PremierLeague extends React.Component {
   }
 
   componentDidMount() {
-    fetch("https://api-football-v1.p.rapidapi.com/v2/teams/league/1", {
+    //fetch Premier League
+    fetch("https://api-football-v1.p.rapidapi.com/v2/teams/league/2", {
       method: "GET",
       headers: {
         "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
@@ -25,5 +25,9 @@ export default class PremierLeague extends React.Component {
       .catch(err => {
         console.log(err);
       });
+  }
+
+  render() {
+    return <h1>Premier League</h1>;
   }
 }
