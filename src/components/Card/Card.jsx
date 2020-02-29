@@ -13,6 +13,7 @@ export const Card = props => {
         alt="Team Logo"
       />
       <h2>{props.team.name}</h2>
+      <p>Established {props.team.founded}</p>
       <p>{props.team.venue_name}</p>
       <CustomButton team={props.team.name} />
     </div>

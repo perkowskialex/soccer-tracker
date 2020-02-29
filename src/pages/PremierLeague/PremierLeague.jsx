@@ -2,6 +2,8 @@ import React from "react";
 import CardList from "../../components/CardList/CardList";
 import SearchBox from "../../components/SearchBox/SearchBox";
 
+import "./PremierLeague.css";
+
 export default class PremierLeague extends React.Component {
   constructor(props) {
     super(props);
