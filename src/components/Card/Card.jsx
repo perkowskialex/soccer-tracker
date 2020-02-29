@@ -1,5 +1,5 @@
 import React from "react";
-import CustomButton from "../CustomButton/CustomButton";
+import TeamButton from "../TeamButton/TeamButton";
 
 import "./Card.css";
 
@@ -13,9 +13,9 @@ export const Card = props => {
         alt="Team Logo"
       />
       <h2>{props.team.name}</h2>
-      <p>Established {props.team.founded}</p>
+      <p>Est. {props.team.founded}</p>
       <p>{props.team.venue_name}</p>
-      <CustomButton team={props.team.name} />
+      <TeamButton team={props.team.name} />
     </div>
   );
 };
