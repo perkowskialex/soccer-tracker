@@ -12,6 +12,7 @@
   transition: transform 0.25s ease-out;
   align-items: center;
   color: #38003c;
+  font-family: "Poppins";
 }
 .card-container:hover {
   transform: scale(1.05);
