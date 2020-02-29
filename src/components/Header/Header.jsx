@@ -5,7 +5,9 @@ import "./Header.css";
 const Header = () => {
   return (
     <div className="header-container">
-      <div className="logo-container">Logo</div>
+      <div className="logo-container">
+        <img src="./assets/Soccer_monogram_frame-02.svg" alt="Logo" />
+      </div>
       <div className="options-container">
         <Link className="option-link" to="/">
           Home
