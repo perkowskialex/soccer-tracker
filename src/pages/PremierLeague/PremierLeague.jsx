@@ -1,5 +1,6 @@
 import React from "react";
 import CardList from "../../components/CardList/CardList";
+import SearchBox from "../../components/SearchBox/SearchBox";
 
 export default class PremierLeague extends React.Component {
   constructor(props) {
@@ -7,9 +8,14 @@ export default class PremierLeague extends React.Component {
     this.state = {
       error: null,
       isLoaded: false,
-      teams: []
+      teams: [],
+      searchField: ""
     };
   }
+
+  handleChange = e => {
+    this.setState({ searchField: e.target.value });
+  };
 
   componentDidMount() {
     //fetch Premier League
@@ -36,10 +42,19 @@ export default class PremierLeague extends React.Component {
   }
 
   render() {
+    const { teams, searchField } = this.state;
+    const filteredTeams = teams.filter(team =>
+      // case insensitive
+      team.name.toLowerCase().includes(searchField.toLowerCase())
+    );
     return (
       <div className="teams-container">
         <h1>Premier League Teams</h1>
-        <CardList teams={this.state.teams} />
+        <SearchBox
+          placeholder={`Search Premier League teams`}
+          handleChange={this.handleChange}
+        />
+        <CardList teams={filteredTeams} />
       </div>
     );
   }
