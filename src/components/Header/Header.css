@@ -1,7 +1,8 @@
 .header-container {
   height: 8vh;
   width: 100%;
-  background-color: black;
+  /* header BG color work in progress, maybe i should swap logos */
+  background-color: #04f5ff;
   color: wheat;
   font-size: 120%;
   display: flex;
