@@ -45,7 +45,15 @@ export default class PremierLeague extends React.Component {
 
   render() {
     const { teams, searchField } = this.state;
-    const filteredTeams = teams.filter(team =>
+    // sorting teams by name.. not actually sorting...
+    let teamsSorted = teams.slice(0);
+    teamsSorted.sort(function(a, b) {
+      var x = a.name.toLowerCase();
+      var y = b.name.toLowerCase();
+      return x < y ? -1 : x > y ? 1 : 0;
+    });
+    console.log("teams sort", teamsSorted);
+    const filteredTeams = teamsSorted.filter(team =>
       // case insensitive
       team.name.toLowerCase().includes(searchField.toLowerCase())
     );
