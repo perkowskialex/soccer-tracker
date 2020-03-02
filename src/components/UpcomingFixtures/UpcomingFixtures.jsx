@@ -1,40 +1,52 @@
 import React from "react";
 import SearchBox from "../SearchBox/SearchBox";
+import FixtureList from "../FixtureList/FixtureList";
 
 class UpcomingFixtures extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       fixtures: [],
-      searchField: ""
+      searchField: "",
+      isLoaded: false
     };
   }
   componentDidMount() {
     console.log("Mount Upcoming Fixtures");
+    // premier league fixture
     fetch(
-      "https://api-football-v1.p.rapidapi.com/v2/fixtures/league/524/next/10?timezone=Europe%252FLondon",
+      "https://api-football-v1.p.rapidapi.com/v2/fixtures/league/524/next/10",
       {
         headers: {
           "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
-          "x-rapidapi-key": "ffc04b5815mshc0cd65f93188805p1a1234jsnc8f5c54fcef3"
+          "x-rapidapi-key": "8b54882d16msh91800fa15b1c3cep15cb26jsna5a0b982eaa6"
         }
       }
     )
       .then(res => {
         return res.json().then(data => {
           // gets {api}
-          console.log(data);
           return data;
         });
       })
       .then(data => {
-        this.setState({ fixtures: data.api.results.fixtures });
-        console.log(this.state.fixtures);
+        this.setState({ fixtures: data.api.fixtures, isLoaded: true });
       });
   }
 
   render() {
-    return <SearchBox placeholder="search upcoming fixtures" />;
+    return (
+      <div>
+        <SearchBox placeholder="search upcoming fixtures" />
+        {/* make sure data is there */}
+        {this.state.isLoaded ? (
+          <FixtureList
+            isLoaded={this.state.isLoaded}
+            fixtures={this.state.fixtures}
+          />
+        ) : null}
+      </div>
+    );
   }
 }
 

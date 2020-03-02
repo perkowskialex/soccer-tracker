@@ -9,12 +9,12 @@ export default class PremierLeague extends React.Component {
     super(props);
     this.state = {
       error: null,
-      isLoaded: false,
       teams: [],
       searchField: ""
     };
   }
 
+  //search comp func
   handleChange = e => {
     this.setState({ searchField: e.target.value });
   };
@@ -45,7 +45,7 @@ export default class PremierLeague extends React.Component {
 
   render() {
     const { teams, searchField } = this.state;
-    // sorting teams by name.. not actually sorting...
+    // sort function
     let teamsSorted = teams.slice(0);
     teamsSorted.sort(function(a, b) {
       var x = a.name.toLowerCase();
@@ -61,6 +61,7 @@ export default class PremierLeague extends React.Component {
       <div className="teams-container">
         <h1>Premier League Teams</h1>
         <SearchBox
+          // search info
           placeholder={`Search Premier League teams`}
           handleChange={this.handleChange}
         />
