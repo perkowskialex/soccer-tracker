@@ -40,10 +40,13 @@ class UpcomingFixtures extends React.Component {
         <SearchBox placeholder="search upcoming fixtures" />
         {/* make sure data is there */}
         {this.state.isLoaded ? (
-          <FixtureList
-            isLoaded={this.state.isLoaded}
-            fixtures={this.state.fixtures}
-          />
+          <div>
+            <h1>Upcoming {this.state.fixtures[0].league.name} Fixtures</h1>
+            <FixtureList
+              isLoaded={this.state.isLoaded}
+              fixtures={this.state.fixtures}
+            />
+          </div>
         ) : null}
       </div>
     );
