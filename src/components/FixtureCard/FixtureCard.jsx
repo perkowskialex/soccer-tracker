@@ -14,6 +14,7 @@ export const FixtureCard = props => {
         <h2>{props.f.homeTeam.team_name}</h2> <p>vs</p>{" "}
         <h2>{props.f.awayTeam.team_name}</h2>
       </span>
+      {/* need to convert date/time */}
       <h4>Event Date and Time: {props.f.event_date}</h4>
       <h4>Location: {props.f.venue}</h4>
     </div>
