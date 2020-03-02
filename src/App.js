@@ -12,6 +12,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <UpcomingFixtures />
       <Switch>
         <Route path="/pl/fixtures">
           <UpcomingFixtures />

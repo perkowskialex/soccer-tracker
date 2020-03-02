@@ -34,7 +34,7 @@ class UpcomingFixtures extends React.Component {
   }
 
   render() {
-    return <SearchBox />;
+    return <SearchBox placeholder="search upcoming fixtures" />;
   }
 }
 
