@@ -1,11 +1,12 @@
 import React from "react";
 import "./TeamCard.css";
+import TeamFixtures from "../TeamFixtures/TeamFixtures";
 
 const TeamCard = props => {
   console.log("team card props", props);
   // const teamId = props.team.team_id;
   return (
-    <div className="card-container">
+    <div className="team-card-container">
       {" "}
       <img
         className="image"
@@ -20,6 +21,7 @@ const TeamCard = props => {
       </p>
       <div>
         <h2>{props.team.name}'s upcoming fixtures:</h2>
+        <TeamFixtures team={props.team} />
       </div>
     </div>
   );
