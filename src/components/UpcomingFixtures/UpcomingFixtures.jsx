@@ -37,6 +37,7 @@ class UpcomingFixtures extends React.Component {
   render() {
     return (
       <div>
+        {/* TO DO  */}
         <SearchBox placeholder="search upcoming fixtures" />
         {/* make sure data is there */}
         {this.state.isLoaded ? (

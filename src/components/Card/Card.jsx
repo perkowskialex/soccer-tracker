@@ -15,7 +15,7 @@ export const Card = props => {
       <h2>{props.team.name}</h2>
       <p>Est. {props.team.founded}</p>
       <p>{props.team.venue_name}</p>
-      <TeamButton team={props.team.name} />
+      <TeamButton team={props.team} />
     </div>
   );
 };
