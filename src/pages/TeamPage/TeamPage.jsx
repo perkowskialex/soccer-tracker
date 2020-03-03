@@ -1,21 +1,9 @@
 import React from "react";
 import TeamCard from "../../components/TeamCard/TeamCard";
 
-class TeamPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      team: {}
-    };
-  }
-
-  componentDidMount() {
-    console.log(this.state);
-  }
-
-  render() {
-    return <TeamCard team={this.state.team} />;
-  }
-}
+const TeamPage = props => {
+  let team = props.location.state;
+  return <TeamCard team={team} />;
+};
 
 export default TeamPage;

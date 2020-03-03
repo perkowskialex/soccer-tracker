@@ -12,9 +12,10 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
-        <Route path="/pl/:team">
-          <TeamPage />
-        </Route>
+        <Route
+          path="/pl/:team"
+          render={props => <TeamPage {...props} />}
+        ></Route>
         <Route path="/pl">
           <PremierLeague />
         </Route>

@@ -5,7 +5,7 @@ import "./TeamButton.css";
 
 const TeamButton = props => {
   return (
-    <Link to={{ pathname: `/pl/${props.team.team_id}`, state: { props } }}>
+    <Link to={{ pathname: `/pl/${props.team.team_id}`, state: props.team }}>
       <button>View {props.team.name}</button>
     </Link>
   );
