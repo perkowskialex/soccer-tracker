@@ -8,14 +8,20 @@ class UpcomingFixtures extends React.Component {
     this.state = {
       fixtures: [],
       searchField: "",
-      isLoaded: false
+      isLoaded: false,
+      searchField: ""
     };
   }
+
+  handleChange = e => {
+    this.setState({ searchField: e.target.value });
+  };
+
   componentDidMount() {
     console.log("Mount Upcoming Fixtures");
     // premier league fixture
     fetch(
-      "https://api-football-v1.p.rapidapi.com/v2/fixtures/league/524/next/10",
+      "https://api-football-v1.p.rapidapi.com/v2/fixtures/league/524/next/20",
       {
         headers: {
           "x-rapidapi-host": "api-football-v1.p.rapidapi.com",
@@ -35,17 +41,31 @@ class UpcomingFixtures extends React.Component {
   }
 
   render() {
+    const { searchField, fixtures } = this.state;
+    const filteredFixtures = fixtures.filter(
+      fixture =>
+        fixture.awayTeam.team_name
+          .toLowerCase()
+          .includes(searchField.toLowerCase()) ||
+        fixture.homeTeam.team_name
+          .toLowerCase()
+          .includes(searchField.toLowerCase())
+    );
     return (
       <div>
+        <br />
         {/* TO DO  */}
-        <SearchBox placeholder="search upcoming fixtures" />
+        <SearchBox
+          handleChange={this.handleChange}
+          placeholder="search upcoming fixtures"
+        />
         {/* make sure data is there */}
         {this.state.isLoaded ? (
           <div>
             <h1>Upcoming {this.state.fixtures[0].league.name} Fixtures</h1>
             <FixtureList
               isLoaded={this.state.isLoaded}
-              fixtures={this.state.fixtures}
+              fixtures={filteredFixtures}
             />
           </div>
         ) : null}

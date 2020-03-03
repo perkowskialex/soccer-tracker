@@ -1,7 +1,6 @@
 .team-card-container {
   display: flex;
   flex-direction: column;
-  background-color: white;
   border: 1px solid #04f5ff;
   border-radius: 5px;
   padding: 25px;
