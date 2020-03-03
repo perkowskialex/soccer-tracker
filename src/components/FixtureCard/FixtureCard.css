@@ -1,6 +1,15 @@
-img {
+.images-container > img {
   width: 100px;
   height: 100px;
+}
+
+.league-container > img {
+  width: 70%;
+  height: 70%;
+}
+
+.league-container {
+  padding: 5%;
 }
 
 .images-container {

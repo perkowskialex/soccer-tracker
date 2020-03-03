@@ -9,6 +9,13 @@ export const FixtureCard = props => {
   console.log("fixture card", props);
   return (
     <div className="card-container">
+      <div className="league-container">
+        <img
+          className="league-image"
+          src={`${props.f.league.logo}`}
+          alt="League Logo"
+        />
+      </div>
       <div className="images-container">
         <img src={`${props.f.homeTeam.logo}`} alt="Home Team Logo" />
         <img src={`${props.f.awayTeam.logo}`} alt="Away Team Logo" />
