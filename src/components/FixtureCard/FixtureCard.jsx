@@ -9,6 +9,10 @@ export const FixtureCard = props => {
   console.log("fixture card", props);
   return (
     <div className="card-container">
+      <h2>
+        &nbsp;
+        <Moment format="LL">{date}</Moment>
+      </h2>
       <div className="league-container">
         <img
           className="league-image"
@@ -24,11 +28,6 @@ export const FixtureCard = props => {
         <h2>{props.f.homeTeam.team_name}</h2> <p>vs</p>{" "}
         <h2>{props.f.awayTeam.team_name}</h2>
       </span>
-      {/* need to convert date/time */}
-      <h4>
-        Date:&nbsp;
-        <Moment format="YYYY-MM-DD">{date}</Moment>
-      </h4>
       <h4>Location: {props.f.venue}</h4>
     </div>
   );

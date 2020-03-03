@@ -13,7 +13,7 @@ const TeamCard = props => {
         src={`https://media.api-sports.io/teams/${props.team.team_id}.png`}
         alt="Team Logo"
       />
-      <h2>{props.team.name}</h2>
+      <h1>{props.team.name}</h1>
       <p>Est. {props.team.founded}</p>
       <p>{props.team.venue_name}</p>
       <p>
