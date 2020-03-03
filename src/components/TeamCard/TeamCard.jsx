@@ -3,7 +3,7 @@ import "./TeamCard.css";
 
 const TeamCard = props => {
   console.log("team card props", props);
-  const teamId = props.team.team_id;
+  // const teamId = props.team.team_id;
   return (
     <div className="card-container">
       {" "}
@@ -18,6 +18,9 @@ const TeamCard = props => {
       <p>
         Location: {props.team.venue_address}, {props.team.venue_city}
       </p>
+      <div>
+        <h2>{props.team.name}'s upcoming fixtures:</h2>
+      </div>
     </div>
   );
 };
