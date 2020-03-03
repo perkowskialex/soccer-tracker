@@ -8,7 +8,7 @@ export const FixtureCard = props => {
   const date = props.f.event_date;
   console.log("fixture card", props);
   return (
-    <div className="card-container">
+    <div className="fixture-card-container">
       <h2>
         &nbsp;
         <Moment format="LL">{date}</Moment>

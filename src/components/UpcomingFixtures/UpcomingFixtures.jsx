@@ -8,8 +8,7 @@ class UpcomingFixtures extends React.Component {
     this.state = {
       fixtures: [],
       searchField: "",
-      isLoaded: false,
-      searchField: ""
+      isLoaded: false
     };
   }
 
