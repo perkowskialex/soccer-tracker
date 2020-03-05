@@ -4,12 +4,14 @@
 }
 
 .league-container > img {
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 }
 
 .league-container {
-  padding: 5%;
+  height: 25%;
+  width: 15%;
+  padding: 5px 10px;
 }
 
 .images-container {
@@ -24,7 +26,7 @@
   background-color: white;
   border: 1px solid #04f5ff;
   border-radius: 5px;
-  padding: 25px;
+  padding: 1%;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
   transform: translateZ(0);
@@ -32,7 +34,15 @@
   align-items: center;
   color: #38003c;
   font-family: "Poppins";
+  width: 80vw;
+  height: 35vh;
 }
 .fixture-card-container:hover {
   transform: scale(1.05);
+}
+
+.teams-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }

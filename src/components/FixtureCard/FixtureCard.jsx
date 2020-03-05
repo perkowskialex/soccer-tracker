@@ -9,27 +9,29 @@ export const FixtureCard = props => {
   console.log("fixture card", props);
   return (
     <div className="fixture-card-container">
-      <div className="date-container">
-        <h2>
-          &nbsp;
-          <Moment format="LL">{date}</Moment>
-        </h2>
-        <div className="league-container"></div>
+      <div className="league-container">
         <img
           className="league-image"
           src={`${props.f.league.logo}`}
           alt="League Logo"
         />
       </div>
-      <div className="images-container">
-        <img src={`${props.f.homeTeam.logo}`} alt="Home Team Logo" />
-        <img src={`${props.f.awayTeam.logo}`} alt="Away Team Logo" />
-      </div>
-      <span>
-        <h2>{props.f.homeTeam.team_name}</h2> <p>vs</p>{" "}
-        <h2>{props.f.awayTeam.team_name}</h2>
+      <span className="teams-container">
+        <div className="images-container">
+          <img src={`${props.f.homeTeam.logo}`} alt="Home Team Logo" />
+          <h2>{props.f.homeTeam.team_name}</h2> <p>vs</p>{" "}
+          <h2>{props.f.awayTeam.team_name}</h2>
+          <img src={`${props.f.awayTeam.logo}`} alt="Away Team Logo" />
+        </div>
       </span>
+
       <h4>Location: {props.f.venue}</h4>
+      <div className="date-container">
+        <h2>
+          &nbsp;
+          <Moment format="LL">{date}</Moment>
+        </h2>
+      </div>
     </div>
   );
 };
