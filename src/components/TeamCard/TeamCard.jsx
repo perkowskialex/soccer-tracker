@@ -45,6 +45,7 @@ class TeamCard extends React.Component {
           alt="Team Logo"
         />
         <h1>{this.props.team.name}</h1>
+        <h2>Manager: {this.state.coach.name}</h2>
         <p>Est. {this.props.team.founded}</p>
         <p>{this.props.team.venue_name}</p>
         <p>

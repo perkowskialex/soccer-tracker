@@ -1,6 +1,12 @@
 .images-container > img {
   width: 100px;
   height: 100px;
+  padding: 0 2%;
+}
+
+.images-container > p,
+h2 {
+  padding: 0 2%;
 }
 
 .league-container > img {
