@@ -9,11 +9,12 @@ export const FixtureCard = props => {
   console.log("fixture card", props);
   return (
     <div className="fixture-card-container">
-      <h2>
-        &nbsp;
-        <Moment format="LL">{date}</Moment>
-      </h2>
-      <div className="league-container">
+      <div className="date-container">
+        <h2>
+          &nbsp;
+          <Moment format="LL">{date}</Moment>
+        </h2>
+        <div className="league-container"></div>
         <img
           className="league-image"
           src={`${props.f.league.logo}`}
