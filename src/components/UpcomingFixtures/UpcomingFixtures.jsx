@@ -20,7 +20,7 @@ class UpcomingFixtures extends React.Component {
     console.log("Mount Upcoming Fixtures");
     // premier league fixture
     fetch(
-      "https://api-football-v1.p.rapidapi.com/v2/fixtures/league/524/next/20",
+      "https://api-football-v1.p.rapidapi.com/v2/fixtures/league/524/next/50",
       {
         headers: {
           "x-rapidapi-host": "api-football-v1.p.rapidapi.com",

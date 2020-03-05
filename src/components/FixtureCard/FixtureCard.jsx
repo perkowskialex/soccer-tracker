@@ -19,7 +19,7 @@ export const FixtureCard = props => {
       <span className="teams-container">
         <div className="images-container">
           <img src={`${props.f.homeTeam.logo}`} alt="Home Team Logo" />
-          <h2>{props.f.homeTeam.team_name}</h2> <p>vs</p>{" "}
+          <h2>{props.f.homeTeam.team_name}</h2> <p>&nbsp;v.&nbsp;</p>{" "}
           <h2>{props.f.awayTeam.team_name}</h2>
           <img src={`${props.f.awayTeam.logo}`} alt="Away Team Logo" />
         </div>
