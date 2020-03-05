@@ -9,15 +9,16 @@
 }
 
 .league-container {
-  height: 25%;
-  width: 15%;
+  height: 30%;
+  width: 30%;
   padding: 5px 10px;
 }
 
 .images-container {
   display: flex;
   justify-content: space-evenly;
-  width: 100%;
+  width: 30%;
+  align-items: center;
 }
 
 .fixture-card-container {
@@ -34,17 +35,21 @@
   align-items: center;
   color: #38003c;
   font-family: "Poppins";
-  width: 80vw;
+  width: 40vw;
   height: 35vh;
+  justify-content: center;
 }
+
 .fixture-card-container:hover {
   transform: scale(1.05);
 }
 
 .teams-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
+  width: 50vw;
 }
 
 .date-container {
