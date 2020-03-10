@@ -1,11 +1,15 @@
 import React from "react";
 import FixtureList from "../FixtureList/FixtureList";
+import Loading from "../Loading/Loading";
+
+import "./TeamFixtures.css";
 
 export default class TeamFixtures extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fixtures: []
+      fixtures: [],
+      isLoaded: false
     };
     fetch(
       `https://api-football-v1.p.rapidapi.com/v2/fixtures/team/${props.team.team_id}/next/10`,
@@ -23,14 +27,18 @@ export default class TeamFixtures extends React.Component {
         });
       })
       .then(data => {
-        this.setState({ fixtures: data.api.fixtures });
+        this.setState({ fixtures: data.api.fixtures, isLoaded: true });
       });
   }
 
   render() {
-    return (
+    return this.state.isLoaded ? (
       <div>
         <FixtureList fixtures={this.state.fixtures} />
+      </div>
+    ) : (
+      <div className="loading-container">
+        <Loading />
       </div>
     );
   }
