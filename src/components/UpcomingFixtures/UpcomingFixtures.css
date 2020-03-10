@@ -1,0 +1,10 @@
+.loading-container {
+  background-color: pink;
+}
+svg {
+  width: 25%;
+  height: 25%;
+  margin: 20px;
+  display: inline-block;
+  color: black;
+}

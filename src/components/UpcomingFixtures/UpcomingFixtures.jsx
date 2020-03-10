@@ -1,6 +1,9 @@
 import React from "react";
 import SearchBox from "../SearchBox/SearchBox";
 import FixtureList from "../FixtureList/FixtureList";
+import Loading from "../Loading/Loading";
+
+import "./UpcomingFixtures.css";
 
 class UpcomingFixtures extends React.Component {
   constructor(props) {
@@ -67,7 +70,11 @@ class UpcomingFixtures extends React.Component {
               fixtures={filteredFixtures}
             />
           </div>
-        ) : null}
+        ) : (
+          <div className="loading-container">
+            <Loading />
+          </div>
+        )}
       </div>
     );
   }

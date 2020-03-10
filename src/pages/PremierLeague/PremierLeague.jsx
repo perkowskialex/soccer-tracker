@@ -1,6 +1,7 @@
 import React from "react";
 import CardList from "../../components/CardList/CardList";
 import SearchBox from "../../components/SearchBox/SearchBox";
+import Loading from "../../components/Loading/Loading";
 
 import "./PremierLeague.css";
 
@@ -10,7 +11,8 @@ export default class PremierLeague extends React.Component {
     this.state = {
       error: null,
       teams: [],
-      searchField: ""
+      searchField: "",
+      isLoaded: false
     };
   }
 
@@ -35,7 +37,7 @@ export default class PremierLeague extends React.Component {
         });
       })
       .then(data => {
-        this.setState({ teams: data.api.teams });
+        this.setState({ teams: data.api.teams, isLoaded: true });
         console.log(this.state.teams);
       })
       .catch(err => {
@@ -57,7 +59,7 @@ export default class PremierLeague extends React.Component {
       // case insensitive
       team.name.toLowerCase().includes(searchField.toLowerCase())
     );
-    return (
+    return this.state.isLoaded ? (
       <div className="teams-container">
         <h1>Premier League Teams</h1>
         <SearchBox
@@ -66,6 +68,10 @@ export default class PremierLeague extends React.Component {
           handleChange={this.handleChange}
         />
         <CardList teams={filteredTeams} />
+      </div>
+    ) : (
+      <div className="loading-container">
+        <Loading />
       </div>
     );
   }
