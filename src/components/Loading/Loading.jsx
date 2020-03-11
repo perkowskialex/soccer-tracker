@@ -2,7 +2,7 @@ import React from "react";
 
 const Loading = () => {
   return (
-    <div>
+    <div className="loading-card">
       <h1>Loading fixtures...</h1>
 
       <svg
