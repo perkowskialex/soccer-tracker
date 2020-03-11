@@ -37,9 +37,7 @@ export default class TeamFixtures extends React.Component {
         <FixtureList fixtures={this.state.fixtures} />
       </div>
     ) : (
-      <div className="loading-container">
-        <Loading />
-      </div>
+      <Loading />
     );
   }
 }

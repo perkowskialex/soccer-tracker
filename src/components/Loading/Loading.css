@@ -1,0 +1,8 @@
+.loading-card {
+  background-color: #38003c;
+  justify-content: center;
+  color: whitesmoke;
+  border-radius: 1%;
+  width: 200%;
+  height: 200%;
+}

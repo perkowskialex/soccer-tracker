@@ -71,9 +71,7 @@ class UpcomingFixtures extends React.Component {
             />
           </div>
         ) : (
-          <div className="loading-container">
-            <Loading />
-          </div>
+          <Loading />
         )}
       </div>
     );
