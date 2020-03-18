@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 
 .options-container {
@@ -26,7 +27,6 @@
 .logo-container {
   display: flex;
   flex-direction: row;
-  align-self: center;
   height: 100%;
-  width: 100%;
+  width: 10%;
 }
