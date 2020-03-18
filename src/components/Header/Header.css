@@ -32,4 +32,11 @@
   flex-direction: row;
   height: 100%;
   width: 10%;
+  padding: 0 1%;
+}
+
+.logo-container > img {
+  width: 50%;
+  height: 80%;
+  padding: 5%;
 }
