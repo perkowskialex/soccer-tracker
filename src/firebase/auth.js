@@ -34,7 +34,11 @@ export const googleSignIn = firebase
     // Handle Errors here.
     var errorCode = error.code;
     var errorMessage = error.message;
-    console.log("Error occurred:", errorCode, errorMessage);
+    console.log(
+      "Error occurred while attempting Google Sign In:",
+      errorCode,
+      errorMessage
+    );
     // The email of the user's account used.
     var email = error.email;
     // The firebase.auth.AuthCredential type that was used.

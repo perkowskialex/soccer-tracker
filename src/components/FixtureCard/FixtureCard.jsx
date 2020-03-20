@@ -6,7 +6,7 @@ import "./FixtureCard.css";
 
 export const FixtureCard = props => {
   const date = props.f.event_date;
-  console.log("fixture card", props);
+  // console.log("fixture card", props);
   return (
     <div className="fixture-card-container">
       <div className="league-container">
