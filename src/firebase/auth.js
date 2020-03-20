@@ -36,7 +36,9 @@ export const googleSignOut = firebase
   .signOut()
   .then(function() {
     // Sign-out successful.
+    console.log("Sign Out Successful");
   })
   .catch(function(error) {
     // An error happened.
+    console.log("error signing out");
   });
