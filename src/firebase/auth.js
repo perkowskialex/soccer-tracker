@@ -44,7 +44,7 @@ export const googleSignIn = firebase
     // The firebase.auth.AuthCredential type that was used.
     var credential = error.credential;
   });
-
+//
 export const googleSignOut = firebase
   .auth()
   .signOut()
@@ -56,3 +56,4 @@ export const googleSignOut = firebase
     // An error happened.
     console.log("error signing out");
   });
+//
