@@ -18,6 +18,7 @@ var firebaseConfig = {
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
+// these are firing right away... i need to make sure that they
 export const googleSignIn = firebase
   .auth()
   .signInWithPopup(provider)
