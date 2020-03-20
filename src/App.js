@@ -11,7 +11,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Container maxWidth="xl\">
+      <Container maxWidth="xl">
         <Header />
         <Switch>
           <Route
