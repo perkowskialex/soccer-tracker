@@ -2,6 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Header.css";
 
+import { GoogleCustomButton } from "../GoogleCustomButton/GoogleCustomButton";
+
 const Header = () => {
   return (
     <div className="header-container">
@@ -18,6 +20,7 @@ const Header = () => {
         <Link className="option-link" to="/pl">
           Premier League
         </Link>
+        <GoogleCustomButton />
       </div>
     </div>
   );
